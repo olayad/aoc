@@ -11,15 +11,13 @@ test = [199,
 260,
 263] 
 
-fp = open('./day1-pt1-input.txt')
+fp = open('../day1-pt1-input.txt')
 
 increased = 0
 decreased = 0
 prev = 0 
 for index, reading in enumerate(fp):
     depth = int(reading)
-    print(f'index: {index}, depth:{depth}')
-    print(f'type index{type(index)}, type depth{type(depth)}')
     if index == 0:
         depth = prev
     else:
@@ -28,7 +26,7 @@ for index, reading in enumerate(fp):
         elif depth < prev:
             decreased += 1
         else:
-            print(f'whooops index{index}, prev: {prev} ,depth {dept}')
+            print(f'whooops index{index}, prev: {prev} ,depth {depth}')
     prev = depth
 
 print(f'Decreased: {decreased}')

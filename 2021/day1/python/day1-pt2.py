@@ -2,7 +2,7 @@
 
 test = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
 
-fp = open('./day1-pt2-input.txt')
+fp = open('../day1-pt2-input.txt')
 content = fp.readlines()
 
 window_sum, equal, increased, decreased, prev, cur = 0, 0, 0, 0, 0, 0
