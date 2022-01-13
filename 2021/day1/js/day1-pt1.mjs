@@ -1,5 +1,3 @@
-
-
 import fetch from 'node-fetch';
 // const fetch = require('node-fetch')
 
@@ -17,5 +15,12 @@ const opts = {
 		cookie: "session=53616c7465645f5f4de5a038aca9ce4b22a5552e1858981bc52ae2dd6ffbf026eac950be83e5270ff909e70e5b0e6f2b"
 	}
 };
-const result = await fetch(url, opts)
-console.log(result)
+// console.log('hi')
+// const response = await fetch(url, opts)
+// console.log(response.text())
+
+fetch(url, opts)
+.then(response => response.text())
+.then(data => {
+	console.log(data)
+})
